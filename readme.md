@@ -7,6 +7,9 @@ Please take a look at http://developer.forecast.io to get details on the API and
 
 I have implemented classes for each data block/point that forecast.io provides.
 
+All attempts to get a value from the respective object will either return the value, or null if it does not exist.
+(Hopefully I haven't missed any occurences of this).
+
 The Classes provided are as follows:
 
 * ForecastIO.java - The main class that sets up the API request.
@@ -26,7 +29,13 @@ The Classes provided are as follows:
 Use the jar file as you normally would. Then proceed as follows:
 
         ForecastIO FIO = new ForecastIO(apiKey, latitude, longitude);  
+		
+		//ability to set the units, exclude blocks and extend options for the request. This is not required.
+		FIO.setRequestOptions("si",exclude,false);
         FIO.makeRequest();  
+		
+		//ability to set a custom user agent. This is not required.
+		//FIO.makeRequest(userAgent); 
 
         String responseString = FIO.getResponseString();  
         ForecastIOResponse FIOR = new ForecastIOResponse(responseString);  
@@ -35,14 +44,15 @@ Use the jar file as you normally would. Then proceed as follows:
         String currentSummary = FIOR.getValue("current-summary");
         String thirdHourlyTemperature = FIOR.getValue("hourly-2-temperature");
         String firstDailyIcon = FIOR.getValue("daily-0-icon");
-        String alertDescription = FIOR.getValue("alerts-description"); //alerts defaults to first alert if not given an index.
+		
+		//alerts defaults to first alert if not given an index. (Usually there is only one alert).
+        String alertDescription = FIOR.getValue("alerts-description"); 
 
         ForecastIODataPoint[] minutelyPoints = FIOR.getDataPoints("minutely");
         double thirtiethMinutePrecipitation = FIOR.getValueAsDouble("precipitationIntensity");
 
         ForecastIODataPoint[] hourlyPoints = FIOR.getDataPoints("hourly");
         ForecastIODataPoint[] dailyPoints = FIOR.getDataPoints("daily");
-
 
         //you can also do it the hard way
         String currentSummary = FIOR.getCurrently().getValue("summary");
