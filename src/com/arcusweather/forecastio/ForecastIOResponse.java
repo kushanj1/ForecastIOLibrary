@@ -151,14 +151,19 @@ public class ForecastIOResponse {
 	
 	public ForecastIODataPoint[] getDataPoints(String keyString) {
 		ForecastIODataPoint[] value = null;
-		if(keyString == "minutely") {
-			value = getMinutely().getData();
+		try {
+			if(keyString == "minutely") {
+				value = getMinutely().getData();
+			}
+			else if(keyString == "hourly") {
+				value = getHourly().getData();
+			}
+			else if(keyString == "daily") {
+				value = getDaily().getData();
+			}
 		}
-		else if(keyString == "hourly") {
-			value = getHourly().getData();
-		}
-		else if(keyString == "daily") {
-			value = getDaily().getData();
+		catch(NullPointerException e) {
+			return null;
 		}
 		return value;
 	}
