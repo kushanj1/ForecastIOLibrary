@@ -53,3 +53,5 @@ Please note that this library requires the JSON project that you will need to ad
 
 I got the .jar file from here:
 http://www.java2s.com/Code/JarDownload/java/java-json.jar.zip
+
+My Java is probably at a very low level, so excuse any weirdness.
