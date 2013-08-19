@@ -36,9 +36,6 @@ Use the jar file as you normally would. Then proceed as follows:
 		requestParams.put("userAgent", "Custom User Agent 1.0");
 		FIO.setRequestParams(requestParams);
         FIO.makeRequest();  
-		
-		//ability to set a custom user agent. This is not required.
-		//FIO.makeRequest(userAgent); 
 
         String responseString = FIO.getResponseString();  
         ForecastIOResponse FIOR = new ForecastIOResponse(responseString);  
