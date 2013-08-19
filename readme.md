@@ -30,8 +30,11 @@ Use the jar file as you normally would. Then proceed as follows:
 
         ForecastIO FIO = new ForecastIO(apiKey, latitude, longitude);  
 		
-		//ability to set the units, exclude blocks and extend options for the request. This is not required.
-		FIO.setRequestOptions("si",exclude,false);
+		//ability to set the units, exclude blocks, extend options and user agent for the request. This is not required.
+		HashMap<String, String> requestParam = new HashMap<String, String>();
+		requestParams.put("units", "us");
+		requestParams.put("userAgent", "Custom User Agent 1.0");
+		FIO.setRequestParams(requestParams);
         FIO.makeRequest();  
 		
 		//ability to set a custom user agent. This is not required.
