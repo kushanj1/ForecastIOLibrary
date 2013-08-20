@@ -26,7 +26,7 @@ The Classes provided are as follows:
 
 ##Usage
 
-Use the jar file as you normally would. Then proceed as follows:
+Use the jar file as you normally would in your project. Then proceed as follows:
 
         ForecastIO FIO = new ForecastIO(apiKey, latitude, longitude);  
 		
@@ -65,3 +65,5 @@ I got the .jar file from here:
 http://www.java2s.com/Code/JarDownload/java/java-json.jar.zip
 
 My Java is probably at a very low level, so excuse any weirdness.
+
+It was also very late at night when I wrote the javadoc method descriptions, so please excuse the terrible descriptions and the random nonsensical words/
