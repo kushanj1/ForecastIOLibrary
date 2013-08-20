@@ -41,7 +41,7 @@ public class ForecastIODataPoint {
 	/**
 	 * Method to retrieve a value for use
 	 * @param key	string value of the parameter
-	 * @return
+	 * @return field value as string
 	 */
 	public String getValue(String key) {
 		return mDataPointMap.get(key);
@@ -49,8 +49,8 @@ public class ForecastIODataPoint {
 	
 	/**
 	 * get Value as an integer
-	 * @param key	value of the amount 
-	 * @return	integer representing value of last_night;
+	 * @param key	string value of the parameter
+	 * @return	field value as integer;
 	 */
 	public int getValueAsInt(String key) {
 		return Integer.parseInt(getValue(key));
@@ -59,16 +59,16 @@ public class ForecastIODataPoint {
 	/**
 	 * get Value as an double
 	 * @param key	value of the amount 
-	 * @return	double representing value of last_night;
+	 * @return	field value as double;
 	 */
 	public Double getValueAsDouble(String key) {
 		return Double.parseDouble(getValue(key));
 	}
 	
 	/**
-	 * get Value as an integer
+	 * get Value as an long
 	 * @param key	value of the amount 
-	 * @return	integer representing value of last_night;
+	 * @return	field value as long;
 	 */
 	public Long getValueAsLong(String key) {
 		return Long.parseLong(getValue(key));

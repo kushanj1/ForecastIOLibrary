@@ -32,7 +32,7 @@ public class ForecastIOMinutely {
 	}
 	
 	/**
-	 * returns a single data block for daily weather
+	 * returns a single data block for minutely weather
 	 * @see ForecastIODataBlock
 	 */
 	public ForecastIODataBlock get() {
@@ -41,7 +41,7 @@ public class ForecastIOMinutely {
 	
 	/**
 	 * construct the forecastIODataBlock object
-	 * @param forecastDailyJsonObject json object of daily weather
+	 * @param forecastDailyJsonObject json object of minutely weather
 	 * @return ForecastIODataBlock which hold all info for that data block
 	 * @see ForecastIODataBlock
 	 */

@@ -89,7 +89,7 @@ public class ForecastIOResponse {
 
 	/**
 	 * This method will return a specific value based on the key string.
-	 * This method will return null if the value is not found in the yankees.
+	 * This method will return null if the value is not found.
 	 * @param keyString
 	 * @return the value of the data point
 	 */

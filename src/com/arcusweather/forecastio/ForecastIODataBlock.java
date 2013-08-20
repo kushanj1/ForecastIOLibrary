@@ -37,7 +37,7 @@ public class ForecastIODataBlock {
 	/**
 	 * Method to retrieve a value for use
 	 * @param key String key value
-	 * @return
+	 * @return field value as string
 	 */
 	public String getValue(String key) {
 		if(key.equals(new String("summary"))) {
@@ -51,7 +51,7 @@ public class ForecastIODataBlock {
 	
 	/**
 	 * method returns the summary for this data block;
-	 * @return
+	 * @return string value of summary
 	 */
 	public String summary() {
 		return summary;
@@ -59,15 +59,16 @@ public class ForecastIODataBlock {
 	
 	/**
 	 * method returns the icon for this data block;
-	 * @return
+	 * @return string value of icon
 	 */
 	public String icon() {
 		return icon;
 	}
 	
 	/**
-	 * method returns the summary for this data block;
-	 * @return
+	 * method returns the dataPoints for this data block;
+	 * @return ForecastIODataPoint[] 
+	 * @see ForecastIODataPoint
 	 */
 	public ForecastIODataPoint[] data() {
 		return data;
