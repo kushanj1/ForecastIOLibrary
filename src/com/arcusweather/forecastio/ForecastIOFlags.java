@@ -8,6 +8,10 @@ import org.json.JSONObject;
 public class ForecastIOFlags {
 	private HashMap<String, String> mFlagsDataMap;
 	
+	/**
+	 * constructor method which sets up and populates the response flag object
+	 * @param forecastFlagJsonObject
+	 */
 	public ForecastIOFlags(JSONObject forecastFlagJsonObject) {
 		mFlagsDataMap = new HashMap<String, String>();
 		try {
@@ -29,6 +33,11 @@ public class ForecastIOFlags {
 		}
 	}
 	
+	/**
+	 * method which retrieves a particular value from the data, specified by key
+	 * @param key	String parameter which provides the key for what data to provide
+	 * @return	returns the String value of the key provided, null if it doesnt exist
+	 */
 	public String getValue(String key) {
 		return mFlagsDataMap.get(key);
 	}

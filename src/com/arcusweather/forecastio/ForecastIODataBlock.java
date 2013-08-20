@@ -8,7 +8,11 @@ public class ForecastIODataBlock {
 	private String summary;
 	private String icon;
 	private ForecastIODataPoint[] data;
-
+	
+	/**
+	 * constructor method which initializes data points provided by the api data
+	 * @param forecast the json object that will be used for instantiating this project.
+	 */
 	public ForecastIODataBlock(JSONObject forecastBlockJsonObject) {
 		try {
 			summary = forecastBlockJsonObject.getString("summary");
@@ -30,6 +34,11 @@ public class ForecastIODataBlock {
 		}
 	}
 	
+	/**
+	 * Method to retrieve a value for use
+	 * @param key String key value
+	 * @return
+	 */
 	public String getValue(String key) {
 		if(key.equals(new String("summary"))) {
 			return summary;
@@ -40,12 +49,26 @@ public class ForecastIODataBlock {
 		return null;
 	}
 	
+	/**
+	 * method returns the summary for this data block;
+	 * @return
+	 */
 	public String summary() {
 		return summary;
 	}
+	
+	/**
+	 * method returns the icon for this data block;
+	 * @return
+	 */
 	public String icon() {
 		return icon;
 	}
+	
+	/**
+	 * method returns the summary for this data block;
+	 * @return
+	 */
 	public ForecastIODataPoint[] data() {
 		return data;
 	}
