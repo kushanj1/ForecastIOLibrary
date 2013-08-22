@@ -49,7 +49,7 @@ Use the jar file as you normally would in your project. Then proceed as follows:
         String alertDescription = FIOR.getValue("alerts-description"); 
 
         ForecastIODataPoint[] minutelyPoints = FIOR.getDataPoints("minutely");
-        double thirtiethMinutePrecipitation = FIOR.getValueAsDouble("precipitationIntensity");
+        double thirtiethMinutePrecipitation = minutelyPoints[29].getValueAsDouble("precipitationIntensity");
 
         ForecastIODataPoint[] hourlyPoints = FIOR.getDataPoints("hourly");
         ForecastIODataPoint[] dailyPoints = FIOR.getDataPoints("daily");
