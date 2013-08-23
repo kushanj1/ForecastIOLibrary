@@ -53,7 +53,22 @@ public class ForecastIODataPoint {
 	 * @return	field value as integer;
 	 */
 	public int getValueAsInt(String key) {
-		return Integer.parseInt(getValue(key));
+		String val = "";
+		try{
+			val = getValue(key);
+		}
+		catch(NullPointerException e) {
+			return 0;
+		}
+		
+		int ret = 0;
+		try {
+			ret = Integer.parseInt(val);;
+		}
+		catch(NumberFormatException n) {
+			return 0;
+		}
+		return ret;
 	}
 	
 	/**
@@ -62,7 +77,22 @@ public class ForecastIODataPoint {
 	 * @return	field value as double;
 	 */
 	public Double getValueAsDouble(String key) {
-		return Double.parseDouble(getValue(key));
+		String val = "";
+		try{
+			val = getValue(key);
+		}
+		catch(NullPointerException e) {
+			return null;
+		}
+		
+		double ret = 0;
+		try {
+			ret = Double.parseDouble(val);
+		}
+		catch(NumberFormatException n) {
+			return null;
+		}
+		return ret;
 	}
 	
 	/**
@@ -71,6 +101,21 @@ public class ForecastIODataPoint {
 	 * @return	field value as long;
 	 */
 	public Long getValueAsLong(String key) {
-		return Long.parseLong(getValue(key));
+		String val = "";
+		try{
+			val = getValue(key);
+		}
+		catch(NullPointerException e) {
+			return null;
+		}
+		
+		long ret = 0;
+		try {
+			ret = Long.parseLong(val);
+		}
+		catch(NumberFormatException n) {
+			return null;
+		}
+		return ret;
 	}
 }
