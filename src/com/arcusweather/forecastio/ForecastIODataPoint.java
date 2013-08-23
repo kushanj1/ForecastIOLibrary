@@ -84,6 +84,8 @@ public class ForecastIODataPoint {
 		catch(NullPointerException e) {
 			return null;
 		}
+
+		if(val == null) { return null; }
 		
 		double ret = 0;
 		try {
@@ -108,6 +110,8 @@ public class ForecastIODataPoint {
 		catch(NullPointerException e) {
 			return null;
 		}
+
+		if(val == null) { return null; }
 		
 		long ret = 0;
 		try {
