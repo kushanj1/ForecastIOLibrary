@@ -1,6 +1,6 @@
-#ForecastIOLibrary
+# ForecastIOLibrary
 
-###This library was created for and used by the Android App "Arcus Weather".
+## This library was created for and used by the Android App "Arcus Weather".
 
 This project provides a Java library for using the Forecast.IO weather api.
 Please take a look at http://developer.forecast.io to get details on the API and what data is returned. 
@@ -24,7 +24,7 @@ The Classes provided are as follows:
 * ForecastIOAlert.java - Implements all data points sent back for alerts by the API call.
 * ForecastIOFlags.java - Implements a portion of data points sent back by the API call.
 
-##Usage
+## Usage
 
 Use the jar file as you normally would in your project. Then proceed as follows:
 
